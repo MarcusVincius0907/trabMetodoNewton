@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Método de newton</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .inputEixo {
+        background-color: #99e9ccfa;
+        padding: 6px;
+        border-radius: 7px;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="h-screen w-full bg-green-500 flex justify-center items-center">
+      <div class="w-full mx-5 p-5 bg-green-400 rounded-md">
+        <div>
+          <h1 class="text-2xl text-gray-500 font-bold">
+            Digite os eixos abaixo:
+          </h1>
+          <div class="flex justify-evenly flex-wrap mt-5">
+            <div class="bg-green-500 p-5 rounded-md text-gray-700 font-bold mt-5">
+              <div class="text-xl mb-3">Ponto 0</div>
+              <div class="mb-3">
+                <div>Eixo x:</div>
+                <input class="inputEixo" type="number" />
+              </div>
+              <div>
+                <div>Eixo y:</div>
+                <input class="inputEixo" type="number" />
+              </div>
+            </div>
+            <div class="bg-green-500 p-5 rounded-md text-gray-700 font-bold mt-5">
+                <div class="text-xl mb-3">Ponto 1</div>
+                <div class="mb-3">
+                  <div>Eixo x:</div>
+                  <input class="inputEixo" type="number" />
+                </div>
+                <div>
+                  <div>Eixo y:</div>
+                  <input class="inputEixo" type="number" />
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
