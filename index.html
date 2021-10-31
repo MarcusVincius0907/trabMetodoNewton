@@ -19,38 +19,70 @@
     </style>
   </head>
   <body>
-    <div class="h-screen w-full bg-green-500 flex justify-center items-center">
-      <div class="w-full mx-5 p-5 bg-green-400 rounded-md">
-        <div>
+    <div class="h-screen w-full bg-green-500 flex justify-center items-center flex-col">
+      <div class="w-full px-10">
+        <div class="w-full  p-5 bg-green-400 rounded-md mb-5 flex justify-center items-center flex-col">
           <h1 class="text-2xl text-gray-500 font-bold">
-            Digite os eixos abaixo:
+            Ponto a encontrar:
           </h1>
-          <div class="flex justify-evenly flex-wrap mt-5">
-            <div class="bg-green-500 p-5 rounded-md text-gray-700 font-bold mt-5">
-              <div class="text-xl mb-3">Ponto 0</div>
-              <div class="mb-3">
-                <div>Eixo x:</div>
-                <input class="inputEixo" type="number" />
-              </div>
-              <div>
-                <div>Eixo y:</div>
-                <input class="inputEixo" type="number" />
-              </div>
+          <div class="rounded-md text-gray-700 font-bold mt-5" id="0">
+            <div class="mb-3">
+              <input class="inputEixo" type="number" id="pontoEncontrar" value="0"/>
             </div>
-            <div class="bg-green-500 p-5 rounded-md text-gray-700 font-bold mt-5">
-                <div class="text-xl mb-3">Ponto 1</div>
+          </div>
+        </div>
+        <div class="w-full  p-5 bg-green-400 rounded-md">
+          <div class="w-full">
+            <h1 class="text-2xl text-gray-500 font-bold">
+              Digite os eixos abaixo:
+            </h1>
+            <div class="flex justify-evenly flex-wrap mt-5" id="divPontos">
+              <div class="bg-green-500 p-5 rounded-md text-gray-700 font-bold mt-5 m-2 eixos" id="0">
+                <div class="text-xl mb-3">Ponto 0</div>
                 <div class="mb-3">
                   <div>Eixo x:</div>
-                  <input class="inputEixo" type="number" />
+                  <input class="inputEixo x " type="number" value="0" />
                 </div>
                 <div>
                   <div>Eixo y:</div>
-                  <input class="inputEixo" type="number" />
+                  <input class="inputEixo y" type="number" value="0"/>
                 </div>
               </div>
+              <div class="bg-green-500 p-5 rounded-md text-gray-700 font-bold mt-5 m-2 eixos"  id="1">
+                <div class="text-xl mb-3">Ponto 1</div>
+                <div class="mb-3">
+                  <div>Eixo x:</div>
+                  <input class="inputEixo x " type="number" value="0"/>
+                </div>
+                <div>
+                  <div>Eixo y:</div>
+                  <input class="inputEixo y" type="number" value="0"/>
+                </div>
+              </div>
+            </div>
+            <div class="w-full flex flex-wrap">
+              <button class="px-4 py-2 bg-green-500 rounded-md mr-5 mt-8" onclick="removePonto()">
+                Remover Ponto
+              </button>
+              <button class="px-4 py-2 bg-green-500 rounded-md  mt-8" onclick="adicionaPonto()">
+                Adicionar Ponto
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="w-full p-5 bg-green-400 rounded-md mt-5">
+          <div class="w-full flex justify-center justify-evenly">
+            <button class="px-4 py-2 bg-green-500 rounded-md " onclick="calcularResultado()">
+              Calcular Resposta
+            </button>
+            <div class="">
+              <div>Resposta:</div>
+              <div class="inputEixo p-5 mt-1 text-center min-w-1" id="resposta">...</div>
+            </div>
           </div>
         </div>
       </div>
+      
     </div>
     <script src="./index.js"></script>
   </body>
